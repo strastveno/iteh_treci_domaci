@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import WishForm from "./components/WishForm";
 import WishList from "./components/WishList";
+import Travel from "./components/Travel";
 
 function App() {
   const [input, setInput] = useState("");
@@ -15,11 +16,11 @@ function App() {
 
   const filteredHandler = () => {
     switch (status) {
-      case 'completed':
-        setFilteredWishes(wishes.filter(wish => wish.completed === true));
+      case "completed":
+        setFilteredWishes(wishes.filter((wish) => wish.completed === true));
         break;
-      case 'uncompleted':
-        setFilteredWishes(wishes.filter(wish => wish.completed === false));
+        case "uncompleted":
+          setFilteredWishes(wishes.filter((wish) => wish.completed === false));
         break;
       default:
         setFilteredWishes(wishes);
@@ -44,6 +45,9 @@ function App() {
         setWishes={setWishes}
         filteredWishes={filteredWishes}
       />
+
+     <footer><a href="/travel">Bucket list for destinations</a></footer>
+
     </div>
   );
 }

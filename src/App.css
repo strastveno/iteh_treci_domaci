@@ -13,6 +13,14 @@ header {
   font-size: 2rem;
 }
 
+footer{
+  text-align: center;
+}
+.travel{
+  text-align: center;
+  font-size: 2em;
+}
+
 header,
 form {
   min-height: 20vh;
